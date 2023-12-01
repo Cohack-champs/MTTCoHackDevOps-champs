@@ -41,6 +41,9 @@ jobs:
         with:
           name: cohack-app
           path: artifact
+      # Add this step to update the Azure CLI
+      - name: Update Azure CLI
+        run: az upgrade --yes
       - name: 'Az CLI login'
         uses: azure/login@v1
         with:
